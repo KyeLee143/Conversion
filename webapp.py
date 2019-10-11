@@ -10,9 +10,9 @@ def render_main():
 def render_response():
     translate = request.args['language'] 
     if translate == "thank you!":
-        response = "that's my favorite color, too!"
-    else:
         response = "Xeixei!"
+    else:
+        response = "Xeixei"
     return render_template('response.html', responseFromServer=response)
 
 @app.route("/Money")
