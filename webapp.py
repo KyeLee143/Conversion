@@ -6,14 +6,22 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('home.html')
 
-@app.route("/response")
+@app.route("/Langauge")
 def render_response():
-    favorite_color = request.args['color'] #get user's input for color input 
-    if favorite_color == "pink":
+    translate = request.args['language'] 
+    if translate == "thank you!":
         response = "that's my favorite color, too!"
     else:
-        response = "That's a nice color!"
+        response = "Xeixei!"
     return render_template('response.html', responseFromServer=response)
+
+@app.route("/Money")
+def render_page2():
+    return render_template('money.html')
+
+@app.route("/Weight")
+def render_page3():
+    return render_template('weight.html')
     
     
 if __name__=="__main__":
