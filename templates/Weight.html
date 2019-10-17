@@ -6,5 +6,18 @@
   
 {% block content %}
   <h1>Weight lbs to kg</h1>
+   <h2>Pre-selected Option</h2>
+<p>Choose an amount to convert lbs into kg.</p>
+
+<form action="/responseWeight">
+  <select name="weight">
+    <option value="One" selected>1</option>
+    <option value="Five">5</option>
+    <option value="Fifteen">15</option>
+    <option value="Fifty">50</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
 {%endblock%}
     

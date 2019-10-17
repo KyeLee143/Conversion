@@ -6,5 +6,18 @@
   
 {% block content %}
   <h1>Money USD to Yen</h1>
+   <h2>Pre-selected Option</h2>
+<p>Choose an amount to convert into Japanese yen.</p>
+
+<form action="/responseMoney">
+  <select name="money">
+    <option value="one">1.00</option>
+    <option value="five">5.00</option>
+    <option value="twenty" selected>20.00</option>
+    <option value="hundred">100.00</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
 {%endblock%}
     
